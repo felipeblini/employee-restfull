@@ -8,4 +8,5 @@ public interface EmployeeDAO {
  
     public void addEmployee(Employee emp);
     public List<Employee> listEmployees();
+    public String empAddress();
 }
