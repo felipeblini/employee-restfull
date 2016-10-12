@@ -24,15 +24,15 @@ public class EmployeeController {
 	//Inject EmployeeService
 	@Autowired(required=true)
     @Qualifier(value="employeeService")
-    public void setPersonService(EmployeeService es){
-        this.employeeService = es;
+    public void setPersonService(EmployeeService espla){
+        this.employeeService = espla;
     }
 	
 	@RequestMapping(value= EmpRestURIConstants.CREATE_EMP, method = RequestMethod.POST)
-    public @ResponseBody Employee createEmployee(@RequestBody Employee emp){
+    public @ResponseBody Employee createEmployee(@RequestBody Employee employee){
 		logger.info("Start createEmployee.");
-		this.employeeService.addEmployee(emp);
-		return emp;
+		this.employeeService.addEmployee(employee);
+		return employee;
     }
 	
 	@RequestMapping(value = EmpRestURIConstants.GET_ALL_EMP, method = RequestMethod.GET)
