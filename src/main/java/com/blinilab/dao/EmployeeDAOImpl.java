@@ -37,5 +37,17 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         }
         return employeessList;
     }
+
+	@Override
+	public String empAddress() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String age() {
+		// TODO Auto-generated method stub
+		return null;
+	}
     
 }
